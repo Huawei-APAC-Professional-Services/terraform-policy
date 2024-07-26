@@ -9,11 +9,14 @@ definition:
   and:
     - cond_type: "attribute"
       resource_types:
-        - "all"
+      - huaweicloud_vpc_eip
+      - huaweicloud_cce_cluster
       attribute: "tags"
       operator: "exists"
     - cond_type: "attribute"
-      resource_types: "all"
+      resource_types: 
+      - huaweicloud_vpc_eip
+      - huaweicloud_cce_cluster
       attribute: tags.CostCenter
       operator: within
       value:
