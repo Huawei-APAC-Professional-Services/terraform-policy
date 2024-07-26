@@ -6,9 +6,9 @@ metadata:
 scope:
   provider: "huaweicloud"
 definition:
-  - cond_type: "attribute"
-    resource_types:
-      - huaweicloud_obs_bucket
-    attribute: acl
-    operator: not_equals
-    value: "public"
+  cond_type: "attribute"
+  resource_types:
+    - huaweicloud_obs_bucket
+  attribute: acl
+  operator: not_equals
+  value: "public"
