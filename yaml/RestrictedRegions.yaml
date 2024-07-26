@@ -6,10 +6,22 @@ metadata:
 scope:
   provider: huaweicloud
 definition:
-  cond_type: "attribute"
-  resource_types:
-    - "all"
-  attribute: region
-  operator: within
-  value:
-    - "ap-southeast-3"
+  or:
+   - cond_type: "attribute"
+     resource_types:
+      - "provider.huaweicloud"
+     attribute: region
+     operator: within
+     value:
+      - "ap-southeast-3"
+   - or:
+      - cond_type: "attribute"
+        resource_types: "all"
+        attribute: region
+        operator: not exists
+      - cond_type: "attribute"
+        resource_types: "all"
+        attribute: region
+        operator: within
+        value:
+          - "ap-southeast-3"
