@@ -1,0 +1,22 @@
+---
+metadata:
+  name: "Ensure CostCenter tag is in place"
+  id: "CKV_HWC_TAGS_1"
+  category: "TAG"
+scope:
+  provider: "huaweicloud"
+definition:
+  and:
+    - cond_type: "attribute"
+      resource_types:
+        - "all"
+      attribute: "tags"
+      operator: "exists"
+    - cond_type: "attribute"
+      resource_types: "all"
+      attribute: tags.CostCenter
+      operator: within
+      value:
+      - "10010"
+      - "10020"
+      - "30020"
