@@ -52,7 +52,7 @@ class UnRestrictedIngressTraffic(BaseResourceCheck):
 
 class SecurityGroupUnrestrictedIngress22(UnRestrictedIngressTraffic):
     def __init__(self):
-        super().__init__(check_id="HW_NETWORK_0001", port=22)
+        super().__init__(check_id="CKV_HWC_NET_1", port=22)
     
 
 check = SecurityGroupUnrestrictedIngress22()
