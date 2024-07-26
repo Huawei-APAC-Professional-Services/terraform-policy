@@ -1,0 +1,20 @@
+---
+metadata:
+  name: "Ensure bandwidth of EIP is less than 200"
+  id: "ckv_hwc_300"
+  category: "COST"
+scope:
+  provider: huaweicloud
+definition:
+  and:
+  - cond_type: "attribute"
+    resource_types:
+      - huaweicloud_vpc_eip
+    attribute: bandwidth.size
+    operator: "exists"
+  - cond_type: "attribute"
+    resource_types:
+      - huaweicloud_vpc_eip
+    attribute: bandwidth.size
+    operator: less_than
+    value: "200"
