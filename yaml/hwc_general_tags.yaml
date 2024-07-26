@@ -12,6 +12,7 @@ definition:
       - huaweicloud_vpc_eip
       - huaweicloud_cce_cluster
       - huaweicloud_elb_loadbalancer
+      - huaweicloud_vpc
       attribute: "tags"
       operator: "exists"
     - cond_type: "attribute"
@@ -19,6 +20,7 @@ definition:
       - huaweicloud_vpc_eip
       - huaweicloud_cce_cluster
       - huaweicloud_elb_loadbalancer
+      - huaweicloud_vpc
       attribute: tags.CostCenter
       operator: within
       value:
