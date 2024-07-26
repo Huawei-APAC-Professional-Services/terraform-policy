@@ -1,6 +1,6 @@
 ---
 metadata:
-  name: "Ensure No Hard-Coded AK/SK"
+  name: "Ensure No Hard-Coded AK/SK in the Terraform provider"
   id: "CKV_HWC_IAM_1"
   category: "IAM"
 scope:

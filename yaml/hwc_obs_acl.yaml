@@ -1,0 +1,14 @@
+---
+metadata:
+  name: "Ensure obs bucket policy is not public"
+  id: "CKV_HWC_OBS_1"
+  category: "Data"
+scope:
+  provider: "huaweicloud"
+definition:
+  - cond_type: "attribute"
+    resource_types:
+      - huaweicloud_obs_bucket
+    attribute: acl
+    operator: not_equals
+    value: "public"

@@ -1,7 +1,7 @@
 ---
 metadata:
   name: "Ensure only allowed regions are configured"
-  id: "CKV_HWC_REGION_2"
+  id: "CKV_HWC_REGION_1"
   category: "GENERAL_SECURITY"
 scope:
   provider: huaweicloud
