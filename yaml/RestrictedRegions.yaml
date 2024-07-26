@@ -18,7 +18,7 @@ definition:
         - cond_type: "attribute"
           resource_types: "all"
           attribute: region
-          operator: not exists
+          operator: not_exists
         - cond_type: "attribute"
           resource_types: "all"
           attribute: region
