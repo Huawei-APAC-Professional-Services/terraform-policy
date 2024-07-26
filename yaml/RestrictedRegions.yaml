@@ -1,16 +1,15 @@
 ---
 metadata:
   name: "Ensure only allowed regions are configured"
-  id: "HW_REGION_0001"
+  id: "CKV_HWC_REGION_1"
   category: "GENERAL_SECURITY"
 scope:
   provider: huaweicloud
 definition:
-  not:
-    cond_type: "attribute"
-    resource_types:
-      - "provider.huaweicloud"
-    attribute: region
-    operator: any
-    value:
-      - "ap-southeast-3"
+  cond_type: "attribute"
+  resource_types:
+    - "provider.huaweicloud"
+  attribute: region
+  operator: within
+  value:
+    - "ap-southeast-3"
