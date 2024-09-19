@@ -17,24 +17,3 @@ definition:
       operator: within
       value:
       - "ap-southeast-3"
----
-metadata:
-  name: "Ensure Only Approved Region is configured within provider"
-  id: "CKV_HWC_Region_2"
-  category: "Provider"
-scope:
-  provider: "huaweicloud"
-definition:
-  or:
-    - cond_type: "attribute"
-      resource_types:
-        - "provider.huaweicloud"
-      attribute: "region"
-      operator: "not_exists"
-    - cond_type: "attribute"
-      resource_types:
-        - "provider.huaweicloud"
-      attribute: "region"
-      operator: within
-      value:
-      - "ap-southeast-3"
