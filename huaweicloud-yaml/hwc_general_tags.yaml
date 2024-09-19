@@ -12,7 +12,5 @@ definition:
       - huaweicloud_vpc_eip
       - huaweicloud_cce_cluster
       - huaweicloud_elb_loadbalancer
-      - huaweicloud_vpc
-      - huaweicloud_vpc_subnet
       attribute: "tags.CostCenter"
       operator: "exists"
