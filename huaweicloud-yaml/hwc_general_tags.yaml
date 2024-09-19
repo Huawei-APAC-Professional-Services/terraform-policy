@@ -14,18 +14,5 @@ definition:
       - huaweicloud_elb_loadbalancer
       - huaweicloud_vpc
       - huaweicloud_vpc_subnet
-      attribute: "tags"
+      attribute: "tags.CostCenter"
       operator: "exists"
-    - cond_type: "attribute"
-      resource_types: 
-      - huaweicloud_vpc_eip
-      - huaweicloud_cce_cluster
-      - huaweicloud_elb_loadbalancer
-      - huaweicloud_vpc
-      - huaweicloud_vpc_subnet
-      attribute: tags.CostCenter
-      operator: within
-      value:
-      - "10010"
-      - "10020"
-      - "30020"
