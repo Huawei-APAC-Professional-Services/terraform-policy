@@ -10,5 +10,5 @@ definition:
   resource_types:
     - huaweicloud_obs_bucket
   attribute: acl
-  operator: not_equals
+  operator: not_starting_with
   value: "public"
